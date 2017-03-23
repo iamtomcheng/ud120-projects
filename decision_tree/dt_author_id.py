@@ -24,7 +24,7 @@ print "number of selected features:", len(features_train[0])
 #########################################################
 ### your code goes here ###
 
-#"""
+"""
 from sklearn import tree
 clf = tree.DecisionTreeClassifier(min_samples_split=40)
 
@@ -38,7 +38,7 @@ print "accuracy:", clf.score(features_test, labels_test)
 #########################################################
 ## Test decision tree on speed and bumpiness sample
 
-"""
+#"""
 sys.path.append("../choose_your_own/")
 from class_vis import prettyPicture, output_image
 from prep_terrain_data import makeTerrainData
@@ -48,10 +48,8 @@ features_train, labels_train, features_test, labels_test = makeTerrainData()
 print "number of selected features:", len(features_train[0])
 
 from sklearn import tree
-#n = 2
-n = 50
 
-clf = tree.DecisionTreeClassifier(min_samples_split=2)
+clf = tree.DecisionTreeClassifier(min_samples_split=50)
 clf.fit(features_train, labels_train)
 
 prettyPicture(clf, features_test, labels_test)
